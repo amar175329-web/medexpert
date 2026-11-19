@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { EmergencyButton } from "@/components/ui/EmergencyButton";
-import { HeartPulse } from "lucide-react";
+import { HeartPulse, Settings } from "lucide-react";
 
 export function Header() {
   const t = useTranslations("common");
@@ -26,6 +26,13 @@ export function Header() {
         <div className="flex items-center gap-2">
           <LanguageToggle />
           <EmergencyButton />
+          <Link
+            href="/settings"
+            className="p-2 text-ink-soft hover:text-ink hover:bg-black/5 rounded-full min-h-[44px] min-w-[44px] flex items-center justify-center transition-colors"
+            aria-label={t("settings")}
+          >
+            <Settings className="w-5 h-5" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </header>

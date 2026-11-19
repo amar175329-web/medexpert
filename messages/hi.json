@@ -67,5 +67,19 @@
     "ambulanceNumber": "108",
     "poisonControl": "राष्ट्रीय विष सूचना केंद्र (AIIMS)",
     "poisonControlNumber": "1800116117"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "language": "भाषा (Language)",
+    "textSize": "अक्षरों का आकार (Text Size)",
+    "textSizeS": "छोटा (16px)",
+    "textSizeM": "सामान्य (18px)",
+    "textSizeL": "बड़ा (20px)",
+    "textSizeXL": "बहुत बड़ा (22px)",
+    "accessibility": "सरल और सुलभ दृश्य",
+    "offlineNoticeTitle": "ऑफलाइन सहेजा गया डेटा",
+    "offlineNoticeDesc": "आपकी अलमारी, परिवार और आपातकालीन नंबर आपके फोन पर सुरक्षित रहते हैं।",
+    "account": "खाता और परिवार",
+    "signOut": "लॉग आउट करें"
   }
 }

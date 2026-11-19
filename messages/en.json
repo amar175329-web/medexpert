@@ -67,5 +67,19 @@
     "ambulanceNumber": "108",
     "poisonControl": "National Poison Information Centre (AIIMS)",
     "poisonControlNumber": "1800116117"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "textSize": "Text Size",
+    "textSizeS": "Small (16px)",
+    "textSizeM": "Standard (18px)",
+    "textSizeL": "Large (20px)",
+    "textSizeXL": "Extra Large (22px)",
+    "accessibility": "Accessibility & Display",
+    "offlineNoticeTitle": "Offline Storage",
+    "offlineNoticeDesc": "Your shelf, profiles, and emergency numbers are saved locally on your device for immediate access.",
+    "account": "Account & Household",
+    "signOut": "Sign Out"
   }
 }
