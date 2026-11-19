@@ -1,0 +1,71 @@
+{
+  "common": {
+    "appName": "MedExpert",
+    "tagline": "Your home's health is in good hands",
+    "emergency": "Emergency",
+    "settings": "Settings",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "back": "Back",
+    "offlineNotice": "You are currently offline. Showing saved data.",
+    "verified": "Verified",
+    "unverified": "Added by you",
+    "expiringSoon": "Expiring soon",
+    "expired": "Expired",
+    "lowStock": "Low stock"
+  },
+  "nav": {
+    "today": "Today",
+    "shelf": "Shelf",
+    "ask": "Ask",
+    "family": "Family"
+  },
+  "today": {
+    "greeting": "Namaste, {name}",
+    "defaultGreeting": "Namaste",
+    "allClear": "Everything is in its place today ✓",
+    "upcomingDoses": "Upcoming Doses",
+    "expiringSoon": "Expiring Soon",
+    "take": "Take",
+    "skip": "Skip",
+    "snooze": "Snooze"
+  },
+  "shelf": {
+    "title": "Medicine Shelf",
+    "searchPlaceholder": "Search by medicine, ingredient, location...",
+    "addMedicine": "Add Medicine",
+    "emptyShelf": "Add your first medicine, we'll look after it.",
+    "scanBarcode": "Scan barcode",
+    "photographPack": "Photograph pack",
+    "manualEntry": "Type it yourself",
+    "filterAll": "All",
+    "filterVerified": "Verified",
+    "filterExpiring": "Expiring"
+  },
+  "ask": {
+    "title": "Ask AI",
+    "searchTab": "Search",
+    "askTab": "Ask",
+    "placeholder": "Ask: 'Where is paracetamol?' or 'What expires next month?'",
+    "warming": "Assistant is warming up… displaying instant search results in the meantime.",
+    "disclaimer": "MedExpert provides informational guidance only and is never a substitute for professional medical consultation. If you feel unwell, please consult a qualified doctor.",
+    "noDiagnosisWarning": "We do not diagnose illnesses or recommend dosages."
+  },
+  "family": {
+    "title": "Family Profiles",
+    "addMember": "Add Member",
+    "emptyFamily": "Add household members to organize doses and check allergy flags."
+  },
+  "emergency": {
+    "title": "Emergency Help",
+    "callFirstNote": "Call first, then use the app. In any critical health situation, seek immediate emergency medical care.",
+    "nationalEmergency": "National Emergency Number",
+    "nationalEmergencyNumber": "112",
+    "ambulance": "Ambulance",
+    "ambulanceNumber": "108",
+    "poisonControl": "National Poison Information Centre (AIIMS)",
+    "poisonControlNumber": "1800116117"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "common": {
+    "appName": "MedExpert",
+    "tagline": "घर की सेहत, सुरक्षित हाथों में",
+    "emergency": "आपातकाल",
+    "settings": "सेटिंग्स",
+    "loading": "लोड हो रहा है...",
+    "save": "सुरक्षित करें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "back": "वापस",
+    "offlineNotice": "आप अभी ऑफलाइन हैं। सहेजा गया डेटा दिखाया जा रहा है।",
+    "verified": "सत्यापित",
+    "unverified": "आपने जोड़ी है",
+    "expiringSoon": "जल्द समाप्त",
+    "expired": "समाप्त",
+    "lowStock": "कम बची है"
+  },
+  "nav": {
+    "today": "आज की देखभाल",
+    "shelf": "सेहत की अलमारी",
+    "ask": "पूछो",
+    "family": "परिवार"
+  },
+  "today": {
+    "greeting": "नमस्ते, {name}",
+    "defaultGreeting": "नमस्ते",
+    "allClear": "आज सब कुछ सही जगह पर है ✓",
+    "upcomingDoses": "दवाई का समय",
+    "expiringSoon": "जल्द समाप्त होने वाली",
+    "take": "ले ली",
+    "skip": "छोड़ें",
+    "snooze": "बाद में"
+  },
+  "shelf": {
+    "title": "सेहत की अलमारी",
+    "searchPlaceholder": "दवाई, घटक या स्थान खोजें...",
+    "addMedicine": "दवाई जोड़ें",
+    "emptyShelf": "अपनी पहली दवाई जोड़ें, हम संभाल लेंगे",
+    "scanBarcode": "बारकोड स्कैन करें",
+    "photographPack": "पैकेट की फोटो लें",
+    "manualEntry": "खुद लिखें",
+    "filterAll": "सभी",
+    "filterVerified": "सत्यापित",
+    "filterExpiring": "समाप्त होने वाली"
+  },
+  "ask": {
+    "title": "पूछो",
+    "searchTab": "खोज",
+    "askTab": "पूछो",
+    "placeholder": "पूछें: 'पैरासिटामोल कहाँ रखी है?' या 'अगले महीने क्या समाप्त होगा?'",
+    "warming": "सहायक तैयार हो रहा है… तब तक तुरंत खोज के नतीजे देखें।",
+    "disclaimer": "MedExpert केवल जानकारी के लिए है और डॉक्टर की सलाह का विकल्प नहीं है। अस्वस्थ महसूस होने पर डॉक्टर से संपर्क करें।",
+    "noDiagnosisWarning": "हम बीमारी का निदान या खुराक की सलाह नहीं देते हैं।"
+  },
+  "family": {
+    "title": "परिवार के सदस्य",
+    "addMember": "सदस्य जोड़ें",
+    "emptyFamily": "दवाइयों के समय और एलर्जी की चेतावनी के लिए परिवार के सदस्यों को जोड़ें।"
+  },
+  "emergency": {
+    "title": "आपातकालीन सहायता",
+    "callFirstNote": "पहले कॉल करें, फिर ऐप का उपयोग करें। किसी भी गंभीर स्थिति में तुरंत आपातकालीन चिकित्सा सहायता लें।",
+    "nationalEmergency": "राष्ट्रीय आपातकालीन नंबर",
+    "nationalEmergencyNumber": "112",
+    "ambulance": "एम्बुलेंस",
+    "ambulanceNumber": "108",
+    "poisonControl": "राष्ट्रीय विष सूचना केंद्र (AIIMS)",
+    "poisonControlNumber": "1800116117"
+  }
+}

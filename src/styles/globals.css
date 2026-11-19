@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FBF8F2;
+  --surface: #FFFFFF;
+  --ink: #1F2A2E;
+  --ink-soft: #55646A;
+  --primary: #2F8F6B;
+  --primary-dark: #1F6B4F;
+  --primary-tint: #E3F3EC;
+  --accent: #E9A23B;
+  --ok: #2F8F6B;
+  --warn: #B26A00;
+  --warn-bg: #FFF1D6;
+  --danger: #B3261E;
+  --danger-bg: #FDE7E5;
+
+  /* Font scale: base 18px */
+  --base-font-size: 18px;
+}
+
+/* User text size options: S / M / L / XL */
+[data-text-size="S"] {
+  --base-font-size: 16px;
+}
+[data-text-size="M"] {
+  --base-font-size: 18px;
+}
+[data-text-size="L"] {
+  --base-font-size: 20px;
+}
+[data-text-size="XL"] {
+  --base-font-size: 22px;
+}
+
+html {
+  font-size: var(--base-font-size);
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Devanagari", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+/* Accessible touch targets and focus styles */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
