@@ -1,53 +1,70 @@
 /**
- * Client-Side Offline Storage using IndexedDB
- * Requirement: TRD §8 - Saved data viewable offline (shelf, profiles, emergency contacts)
+ * Client-Side Offline Storage using idb (IndexedDB wrapper)
+ * Requirement: TRD §8 & Verification Item 5 - Confirm idb is installed and used
  */
 
+import { openDB, DBSchema, IDBPDatabase } from "idb";
 import { UserMedicine, Profile, Location } from "@/types/database";
 
 const DB_NAME = "medexpert_offline";
 const DB_VERSION = 1;
 
-export function openOfflineDB(): Promise<IDBDatabase> {
-  return new Promise((resolve, reject) => {
-    if (typeof window === "undefined" || !("indexedDB" in window)) {
-      return reject(new Error("IndexedDB not available in current environment"));
-    }
-
-    const request = indexedDB.open(DB_NAME, DB_VERSION);
-
-    request.onupgradeneeded = (event) => {
-      const db = (event.target as IDBOpenDBRequest).result;
-      if (!db.objectStoreNames.contains("medicines")) {
-        db.createObjectStore("medicines", { keyPath: "id" });
-      }
-      if (!db.objectStoreNames.contains("profiles")) {
-        db.createObjectStore("profiles", { keyPath: "id" });
-      }
-      if (!db.objectStoreNames.contains("locations")) {
-        db.createObjectStore("locations", { keyPath: "id" });
-      }
-    };
-
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
-  });
+export interface MedExpertDBSchema extends DBSchema {
+  medicines: {
+    key: string;
+    value: UserMedicine;
+  };
+  profiles: {
+    key: string;
+    value: Profile;
+  };
+  locations: {
+    key: string;
+    value: Location;
+  };
 }
 
-export async function saveOfflineData<T extends { id: string }>(
+let dbPromise: Promise<IDBPDatabase<MedExpertDBSchema>> | null = null;
+
+export function getOfflineDB(): Promise<IDBPDatabase<MedExpertDBSchema>> {
+  if (typeof window === "undefined") {
+    return Promise.reject(new Error("IndexedDB is only accessible in browser environment"));
+  }
+
+  if (!dbPromise) {
+    dbPromise = openDB<MedExpertDBSchema>(DB_NAME, DB_VERSION, {
+      upgrade(db) {
+        if (!db.objectStoreNames.contains("medicines")) {
+          db.createObjectStore("medicines", { keyPath: "id" });
+        }
+        if (!db.objectStoreNames.contains("profiles")) {
+          db.createObjectStore("profiles", { keyPath: "id" });
+        }
+        if (!db.objectStoreNames.contains("locations")) {
+          db.createObjectStore("locations", { keyPath: "id" });
+        }
+      },
+    });
+  }
+
+  return dbPromise;
+}
+
+export async function saveOfflineData<T extends UserMedicine | Profile | Location>(
   storeName: "medicines" | "profiles" | "locations",
   items: T[]
 ): Promise<void> {
   try {
-    const db = await openOfflineDB();
+    const db = await getOfflineDB();
     const tx = db.transaction(storeName, "readwrite");
     const store = tx.objectStore(storeName);
-    store.clear();
+    await store.clear();
     for (const item of items) {
-      store.put(item);
+      await store.put(item as any);
     }
+    await tx.done;
   } catch (err) {
-    console.warn(`[OfflineDB] Failed to save offline cache for ${storeName}`, err);
+    console.warn(`[idb] Failed to save offline data for store ${storeName}`, err);
   }
 }
 
@@ -55,14 +72,8 @@ export async function getOfflineData<T>(
   storeName: "medicines" | "profiles" | "locations"
 ): Promise<T[]> {
   try {
-    const db = await openOfflineDB();
-    return new Promise((resolve) => {
-      const tx = db.transaction(storeName, "readonly");
-      const store = tx.objectStore(storeName);
-      const request = store.getAll();
-      request.onsuccess = () => resolve(request.result as T[]);
-      request.onerror = () => resolve([]);
-    });
+    const db = await getOfflineDB();
+    return (await db.getAll(storeName)) as T[];
   } catch {
     return [];
   }

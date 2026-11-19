@@ -74,12 +74,13 @@ Following `docs/03_UX_DESIGN_AND_PAGE_FLOW.md`:
 
 ---
 
-## 🔒 Non-Negotiable Medical Rules
+## 🔒 Non-Negotiable Medical & Privacy Rules
 
 1. **Source Grounding**: Never display any medicine fact (use, ingredient, warning, side effect) without an authoritative citation from `catalog_facts`. No hallucinations.
 2. **Honest Labels**: Unverified medicines clearly show "Added by you" and display only user-typed values.
 3. **No Diagnosis / Prescriptions**: The AI assistant never diagnoses conditions or provides personal dosing advice. It only matches against cited labels in the user's verified shelf and always directs users to consult a doctor.
 4. **Offline Resilience**: Essential shelf records, family profiles, and emergency contacts work offline without internet.
+5. **Data Protection & User Rights**: Consent, export and deletion features included; legal review pending.
 
 ---
 

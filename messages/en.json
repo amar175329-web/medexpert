@@ -63,10 +63,12 @@
     "callFirstNote": "Call first, then use the app. In any critical health situation, seek immediate emergency medical care.",
     "nationalEmergency": "National Emergency Number",
     "nationalEmergencyNumber": "112",
-    "ambulance": "Ambulance",
+    "maternalAmbulance": "Maternal & Child Ambulance (JSSK)",
+    "maternalAmbulanceNumber": "102",
+    "ambulance": "Emergency Ambulance Service (State-dependent)",
     "ambulanceNumber": "108",
-    "poisonControl": "National Poison Information Centre (AIIMS)",
-    "poisonControlNumber": "1800116117"
+    "poisonControl": "National Poison Information Centre (AIIMS NPIC)",
+    "poisonControlNumber": "1800-116-117"
   },
   "settings": {
     "title": "Settings",

@@ -48,6 +48,9 @@ export default async function SettingsPage() {
         <h2 className="font-bold text-ink text-sm">
           {t("account")}
         </h2>
+        <p className="text-[11px] text-ink-soft leading-relaxed">
+          User privacy note: Consent, export and deletion features included; legal review pending.
+        </p>
         <button className="w-full py-3 px-4 rounded-xl border border-danger/30 text-danger font-semibold hover:bg-danger-bg/30 transition-colors flex items-center justify-center gap-2 min-h-[48px]">
           <LogOut className="w-4 h-4" />
           <span>{t("signOut")}</span>

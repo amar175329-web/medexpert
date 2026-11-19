@@ -92,15 +92,15 @@ export default async function DisposalGuidancePage() {
       <div className="bg-surface rounded-2xl p-4 border border-ink/10 text-xs text-ink-soft space-y-2">
         <span className="font-bold text-ink">Authoritative Source Citation</span>
         <p className="leading-relaxed">
-          Guidance formulated in accordance with the <em>Bio-Medical Waste Management Rules (Ministry of Environment, Forest and Climate Change, Govt. of India)</em> and CDSCO guidelines on pharmaceutical disposal.
+          Guidance formulated in accordance with the <em>Bio-Medical Waste Management Rules (Ministry of Environment, Forest and Climate Change, Govt. of India)</em> and Central Pollution Control Board (CPCB) guidelines on hazardous domestic pharmaceutical waste.
         </p>
         <a
-          href="https://cdsco.gov.in"
+          href="https://cpcb.nic.in"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-primary hover:underline font-semibold"
         >
-          <span>Central Drugs Standard Control Organisation (CDSCO)</span>
+          <span>Central Pollution Control Board (CPCB)</span>
           <ExternalLink className="w-3 h-3" />
         </a>
       </div>

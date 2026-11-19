@@ -38,7 +38,7 @@ export default async function EmergencyPage() {
 
             <div className="flex items-center gap-2 bg-danger text-white px-4 py-2.5 rounded-full font-extrabold text-lg shadow-sm group-hover:scale-105 transition-transform flex-shrink-0 ml-2">
               <PhoneCall className="w-4 h-4" />
-              <span>{contact.number}</span>
+              <span>{contact.displayNumber}</span>
             </div>
           </a>
         ))}

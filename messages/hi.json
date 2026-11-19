@@ -63,10 +63,12 @@
     "callFirstNote": "पहले कॉल करें, फिर ऐप का उपयोग करें। किसी भी गंभीर स्थिति में तुरंत आपातकालीन चिकित्सा सहायता लें।",
     "nationalEmergency": "राष्ट्रीय आपातकालीन नंबर",
     "nationalEmergencyNumber": "112",
-    "ambulance": "एम्बुलेंस",
+    "maternalAmbulance": "मातृ एवं शिशु एम्बुलेंस (JSSK)",
+    "maternalAmbulanceNumber": "102",
+    "ambulance": "आपातकालीन एम्बुलेंस सेवा (राज्य-निर्भर)",
     "ambulanceNumber": "108",
-    "poisonControl": "राष्ट्रीय विष सूचना केंद्र (AIIMS)",
-    "poisonControlNumber": "1800116117"
+    "poisonControl": "राष्ट्रीय विष सूचना केंद्र (AIIMS NPIC)",
+    "poisonControlNumber": "1800-116-117"
   },
   "settings": {
     "title": "सेटिंग्स",
